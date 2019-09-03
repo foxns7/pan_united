@@ -1,0 +1,39 @@
+public class Challenge {
+    
+    private static String inputstr;
+    
+    public static void setInputStr(String inputstr) { }
+    	
+    public static String getInputStr() {
+    	return inputstr;
+    }
+    
+    static boolean checkSpaces (String inputstr) {
+	    boolean hasSpace = false; 
+	    if (inputstr != null) {
+	        for (int i = 0; i < inputstr.length(); i++) {
+	            if (inputstr.charAt(i) == ' ') {
+	            	hasSpace = true;
+	            }
+	        }
+	    }
+	    return hasSpace;
+    }
+		
+	static int countWords (String inputstr) {
+		String[] splited = inputstr.split("\\s+");
+		
+		for (int i = startWithLowerCase ? 1 : 0; i < strings.length; i++){
+			strings[i] = StringUtils.capitalize(strings[i]);
+		}
+		return StringUtils.join(strings);
+	}
+	
+	
+	
+   public static void main (String[] args) {
+	   Challenge.setInputStr("This Is A Test");
+	   String inputStr = Challenge.getInputStr();
+   }
+	
+}

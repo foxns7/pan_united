@@ -1,0 +1,26 @@
+package challenge2;
+
+import java.util.ArrayList;
+
+public class challenge2 {
+	
+	static ArrayList<ArrayList<Integer>> listOfSums = new ArrayList<ArrayList<Integer>>();
+
+	static int lol(int[] data) {
+		ArrayList<Integer> firstSum = new ArrayList<>();
+		firstSum.add(data[0]);
+		listOfSums.add(firstSum);
+		for(Integer number: data) {
+			if(firstSum == number) {
+				listOfSums.add(e);
+			}
+		}
+		return listOfSums.size();
+	}
+	
+	public static void main(String[] args) {
+		int[] data = {1,4,1,3,1};
+		lol(data);
+	}
+
+}

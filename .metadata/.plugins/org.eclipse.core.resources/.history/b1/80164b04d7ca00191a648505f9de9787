@@ -1,0 +1,30 @@
+package challenge2;
+
+import java.util.ArrayList;
+import java.util.LinkedList;
+
+
+public class Group {
+
+	LinkedList<Integer> numbers = new LinkedList<>();
+	int sum; 
+	
+	public Group() {
+		
+	}
+	
+	public void add(Integer number) {
+		numbers.addLast(number);
+	}
+	
+	public Integer removeFirst() {
+		Integer first = numbers.removeFirst();
+		sum -= (int) first;
+		return first;
+	}
+	
+	public int sum() {
+		return sum;
+	}
+	
+}

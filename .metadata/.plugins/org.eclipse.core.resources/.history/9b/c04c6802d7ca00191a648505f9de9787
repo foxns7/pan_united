@@ -1,0 +1,24 @@
+package challenge2;
+
+import java.util.ArrayList;
+
+
+public class Group {
+
+	ArrayList<ArrayList<Integer>> listOfGroups = new ArrayList<>();
+	ArrayList<Integer> numbers = new ArrayList<>();
+	int sum; 
+	
+	public Group() {
+		listOfGroups.add(new ArrayList<>());
+	}
+	
+	public void add(int number) {
+		listOfGroups.get
+	}
+	
+	public int groups() {
+		return 
+	}
+	
+}

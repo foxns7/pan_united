@@ -1,0 +1,38 @@
+public class OptimalBreakTime {
+	
+	static int len[];
+    
+    static void setLength(int length[]) { 
+    	len = length; 
+    }
+    	
+    static int[] getLength() {
+    	return len;
+    }
+    
+    static int countOptimalTimeBreak() {
+    	int index = 0;
+    	int sumOfN = 0;
+    	for (int i = 0; i < len.length; i++ ) {
+    		sumOfN = len[i]+1;
+    		System.out.println("i=  "+i+" n= "+len[i]+" sum= "+sumOfN);
+    		if (i + 1 == len[i]) {
+    			index =  i;
+    		}
+    		
+    	}
+    	
+    	return index;
+    }
+    
+    public static void main (String[] args) {
+       int length[] = {1, 4, 1, 3, 1};
+       OptimalBreakTime.setLength(length);
+       int len[] = OptimalBreakTime.getLength();
+       OptimalBreakTime.countOptimalTimeBreak();
+ 	   System.out.println("length  '"+len+"'");
+ 	   
+ 	  
+    }
+
+}

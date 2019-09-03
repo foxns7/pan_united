@@ -1,0 +1,6 @@
+package challenge3;
+
+
+public interface Route{
+	List<Delivery> getDeliveries();
+}

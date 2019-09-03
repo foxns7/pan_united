@@ -1,0 +1,13 @@
+package challenge3;
+
+public class challenge1 {
+
+	static int countWords(String input) {
+		return (int) (input.codePoints().filter(c -> c>='A' && c<='Z').count()+1);
+	}
+	
+	public static void main(String[] args) {
+		System.out.println(countWords("thisContainsFourWords"));
+	}
+
+}

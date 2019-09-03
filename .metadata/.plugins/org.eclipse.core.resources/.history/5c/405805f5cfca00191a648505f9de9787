@@ -1,0 +1,9 @@
+package challenge3;
+
+import java.util.List;
+
+public interface InsertionService {
+	
+	Insertion findInsertion(Delivery deliveryToInsert, List<Route> activeRoutes);
+	
+}

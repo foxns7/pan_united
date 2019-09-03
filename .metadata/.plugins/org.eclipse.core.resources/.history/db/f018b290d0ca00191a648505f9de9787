@@ -1,0 +1,13 @@
+package challenge3.interfaces;
+
+import java.util.List;
+
+public class Insertion implements InsertionService {
+
+	@Override
+	public Insertion findInsertion(Delivery deliveryToInsert, List<Route> activeRoutes) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+}

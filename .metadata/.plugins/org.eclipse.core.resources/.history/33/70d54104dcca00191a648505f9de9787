@@ -1,0 +1,43 @@
+package challenge2;
+
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+
+
+
+public class challenge2 { // inner class
+	
+	static int lol(int[] data) {
+		Manager manager = new Manager();
+		
+		for(int number: data) {
+			if(manager.getFirstGroupSum() != number) {
+				manager.add(number);
+			}
+		}
+		return manager.getGroupSize();
+	}
+
+	public static void main(String[] args) {
+		ArrayList<Integer> originalList = new ArrayList<>();
+		originalList.add(1);
+		originalList.add(4);
+		originalList.add(1);
+		originalList.add(3);
+		originalList.add(1);
+		int partitionSize = 1000;
+		List<List<Integer>> partitions = new LinkedList<List<Integer>>();
+		for (int i = 0; i < originalList.size(); i += partitionSize) {
+		    partitions.add(originalList.subList(i,
+		            Math.min(i + partitionSize, originalList.size())));
+		}
+		for(List<Integer> list: partitions) {
+			for(Integer lol: list) {
+				System.out.print(lol);
+			}
+			System.out.println();
+		}
+	}
+
+}

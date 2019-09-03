@@ -1,0 +1,13 @@
+public class OptimalBreakTime {
+	
+	private static int intg[];
+    
+    public static void setIntg(int intgr[]) { 
+    	intg = intgr; 
+    }
+    	
+    public static int[] getIntg() {
+    	return intg;
+    }
+
+}

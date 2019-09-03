@@ -1,0 +1,15 @@
+package challenge3;
+
+public interface DistanceService {
+	
+	int getDurationInSeconds(Delivery a, Delivery b);
+	
+}
+
+public interface Delivery{
+	String getId();
+}
+
+public interface Route{
+	List<Delivery> getDeliveries();
+}

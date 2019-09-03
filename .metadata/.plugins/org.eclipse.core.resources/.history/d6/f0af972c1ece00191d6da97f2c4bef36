@@ -1,0 +1,29 @@
+
+public class Challenge {
+    
+    private static String inputstr;
+    
+    public static void setInputStr(String inputstr) { }
+    	
+    public static String getInputStr() {
+    	return inputstr;
+    }
+		
+	static int countWords (String inputstr) {
+		boolean space = false; 
+	    if (inputstr != null) {
+	        for (int i = 0; i < inputstr.length(); i++) {
+	            if (inputstr.charAt(i) == ' ') {
+	            	space = true;
+	            }
+	        }
+	    }
+	    return space;
+	}
+	
+   public static void main (String[] args) {
+	   Challenge.setInputStr("HiThereIAmHamiz");
+	   String inputStr = Challenge.getInputStr();
+   }
+	
+}

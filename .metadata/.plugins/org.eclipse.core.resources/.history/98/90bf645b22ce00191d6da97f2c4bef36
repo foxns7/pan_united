@@ -1,0 +1,34 @@
+public class Challenge {
+    
+    private static String inputstr;
+    
+    public static void setInputStr(String str) { 
+    	inputstr = str; 
+    }
+    	
+    public static String getInputStr() {
+    	return inputstr;
+    }
+    
+	static int countWords (String inputstr) {
+		int cnt = 0;
+    	String[] str = inputstr.split("(?=\\p{Upper})");
+    	
+    	for (int i = 0; i < str.length; i++) {
+    		if (str[i] != null) {
+    			cnt++;
+    		}	
+			System.out.println(str[i]);
+		}
+    	System.out.println("Count= "+cnt);
+    	return cnt;
+	}
+	
+   public static void main (String[] args) {
+	   Challenge.setInputStr("ThisIsAJavaTest");
+	   String inputStr = Challenge.getInputStr();
+	   System.out.println("inputStr= "+inputStr);
+	   Challenge.countWords(inputStr);
+   }
+	
+}

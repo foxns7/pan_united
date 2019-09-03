@@ -1,0 +1,43 @@
+package challenge2;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.ListIterator;
+
+
+public class Manager {
+
+	LinkedList<Group> listOfGroups = new LinkedList<>();
+	
+	public Manager() {
+		listOfGroups.add(new Group());
+	}
+	
+	public void add(int number) {
+		ListIterator<Group> li = listOfGroups.listIterator(0);
+		while (li.hasNext()) {
+			Group currentGroup = li.next();
+		    currentGroup.add(number);
+		    if (li.hasPrevious()) {
+		       Group previousGroup = li.previous();
+		       if(previousGroup.sum!=currentGroup.sum && previousGroup.sum<currentGroup.sum) {
+		    	   previousGroup.add(currentGroup.removeFirst());
+		       }
+		    }
+		}
+	}
+	
+	public int getListSize() {
+		try {
+			if(listOfGroups.get(listOfGroups.size()-1).sum == listOfGroups.get(listOfGroups.size()-2).sum) {
+				return listOfGroups.size();
+			}
+		}catch(Exception e) {
+		}
+		return null;
+	}
+	
+	
+	
+}

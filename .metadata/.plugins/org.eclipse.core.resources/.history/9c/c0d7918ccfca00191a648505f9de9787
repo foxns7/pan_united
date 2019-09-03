@@ -1,0 +1,9 @@
+package challenge3;
+
+public class DistanceService {
+	
+	public static void main(String[] args) {
+		System.out.println();
+	}
+
+}

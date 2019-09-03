@@ -1,0 +1,9 @@
+package challenge3;
+
+public class challenge3 {
+	
+	public static void main(String[] args) {
+		System.out.println();
+	}
+
+}

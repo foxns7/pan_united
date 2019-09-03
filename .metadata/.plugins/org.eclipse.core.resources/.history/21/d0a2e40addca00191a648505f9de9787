@@ -1,0 +1,38 @@
+package challenge2;
+
+import java.util.LinkedList;
+
+
+public class Group {
+
+	LinkedList<Integer> numbers = new LinkedList<>();
+	int sum; 
+	int id;
+	
+	public Group(int id) {
+		if(!numbers.isEmpty()) {
+			for(Integer i: numbers) {
+				System.out.print(i);
+			}
+			System.out.println(id+" id End");
+		}else {
+			System.out.println(id+" id Empty");
+		}
+	}
+	
+	public void add(Integer number) {
+		numbers.addLast(number);
+		sum += (int) number;
+	}
+	
+	public Integer removeFirst() {
+		Integer first = numbers.removeFirst();
+		sum -= (int) first;
+		return first;
+	}
+	
+	public int sum() {
+		return sum;
+	}
+	
+}
